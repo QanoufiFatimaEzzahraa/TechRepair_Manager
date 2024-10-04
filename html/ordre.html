@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ordre.css">
+    <!--<script defer src="page.js"></script>-->
+    
+</head>
+<body>
+    <form action="/ordre" method="post">
+        <div class="inputs">
+            <div> <label> DiagnosticPanne</label> <input id="DiagnosticPanne" name ="DiagnosticPanne" type="text"placeholder="DiagnosticPanne" ></div>
+            <div> <label>NbHeuresMO</label> <input id="NbHeuresMO" name = "NbHeuresMO" type="text" placeholder="NbHeuresMO"></div>
+            <div> <label>IDApp</label> <input id="IDApp" name = "IDApp" type="text" placeholder="IDApp">  </div>
+        
+            <button id ="Inserer" type="submit"> Inserer</button>
+        </div>
+    </form>
+    <script>
+        const DiagnosticPanne = document.querySelector("#DiagnosticPanne")
+        const NbHeuresMO = document.querySelector("#NbHeuresMO")
+        const IDApp = document.querySelector("#IDApp")
+        const Inserer = document.querySelector("#Inserer")
+
+        Inserer.addEventListener('click',() => {
+           
+            alert("Insertion avec succes");
+
+            // Attendre pendant 1000 millisecondes (8 secondes)
+           setTimeout(() => {
+              // Vider les champs après le délai
+              DiagnosticPanne.value = "";
+              NbHeuresMO.value = "";
+              IDApp.value = "";
+            }, 1000);
+
+         });
+
+
+        
+    </script>
+    
+</body>
+</html>
